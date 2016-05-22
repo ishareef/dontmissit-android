@@ -18,7 +18,7 @@
         android:id="@+id/profileDrawable"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/profile_pic" />
+        android:src="@drawable/kartik_profile_pic" />
 
     <TextView
         android:layout_width="wrap_content"
