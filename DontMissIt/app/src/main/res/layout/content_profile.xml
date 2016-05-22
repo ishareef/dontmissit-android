@@ -89,7 +89,7 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/messageTextView"
-        android:text="Hey Kartik! Happy birthday man! I hope you like this gift card!"
+        android:text="Happy Birthday Kartik! I hope Tokyo was fun!"
         android:layout_below="@+id/messageLabeltextView"
         android:layout_alignParentStart="true"
         tools:ignore="HardcodedText,LabelFor" />

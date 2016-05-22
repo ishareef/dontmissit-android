@@ -21,6 +21,7 @@ import android.widget.TextView;
 public class ProfileActivity extends AppCompatActivity {
 
     public static boolean HAS_SMS_PERMISSION;
+    private final static String SMS_MSG = "Happy Birthday Kartik! I hope Tokyo was fun!\n\nI got you a $25 iTunes gift card.\nhttp://dontmiss.co/h9qtj34/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,8 @@ public class ProfileActivity extends AppCompatActivity {
                         new String[]{Manifest.permission.SEND_SMS},
                         123);
 
+        } else {
+            HAS_SMS_PERMISSION = true;
         }
 
         // Save button
@@ -46,13 +49,16 @@ public class ProfileActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Your message has been saved!", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Your message has been sent!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
                 // Send text message
                 if (HAS_SMS_PERMISSION) {
                     SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage("2536322529", null, "Testing from DontMiss app", null, null);
+                    smsManager.sendTextMessage("5092302877", null, SMS_MSG, null, null);
+                    smsManager.sendTextMessage("4254082898", null, SMS_MSG, null, null);
+                    smsManager.sendTextMessage("2536322529", null, SMS_MSG, null, null);
+                    System.out.println("TEXT MESSAGE SENT");
                 }
             }
         });
