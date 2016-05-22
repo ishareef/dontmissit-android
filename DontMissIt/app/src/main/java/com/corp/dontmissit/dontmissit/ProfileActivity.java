@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -62,7 +63,7 @@ public class ProfileActivity extends AppCompatActivity {
         int imageViewId = R.id.giftcard_1;
 
         // Selected Gift Card Holder Variables
-        final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.selected_gift_holder);
+        final RelativeLayout giftSelectedLayout = (RelativeLayout) findViewById(R.id.selected_gift_holder);
         final TextView textView = (TextView) findViewById(R.id.gift_card_data);
 
         for (int i = 0; i < numGC; i++) {
@@ -73,8 +74,8 @@ public class ProfileActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // Make the layout holder visible
-                    assert linearLayout != null;
-                    linearLayout.setVisibility(View.VISIBLE);
+                    assert giftSelectedLayout != null;
+                    giftSelectedLayout.setVisibility(View.VISIBLE);
 
                     // Set the selected gift card name to text
                     assert textView != null;
@@ -89,8 +90,8 @@ public class ProfileActivity extends AppCompatActivity {
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                assert linearLayout != null;
-                linearLayout.setVisibility(View.GONE);
+                assert giftSelectedLayout != null;
+                giftSelectedLayout.setVisibility(View.GONE);
             }
         });
     }
