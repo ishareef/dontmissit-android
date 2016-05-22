@@ -93,7 +93,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                 convertView = infalInflater.inflate(R.layout.list_item1_2, null);
             } else if(groupPosition == 1 && childPosition == 0) {
                 convertView = infalInflater.inflate(R.layout.list_item2_1, null);
-            } else {
+            } else if (groupPosition == 1 && childPosition == 1) {
                 convertView = infalInflater.inflate(R.layout.list_item2_2, null);
             }
         }

@@ -72,4 +72,12 @@
         android:layout_below="@+id/imageView1_1"
         android:layout_alignStart="@+id/textView2" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/ic_action_full_star"
+        android:layout_above="@+id/imageView_1_1"
+        android:layout_toEndOf="@+id/textView1_1" />
+
 </RelativeLayout>

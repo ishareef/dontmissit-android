@@ -18,11 +18,11 @@
         android:layout_width="58dp"
         android:layout_height="58dp"
         android:id="@+id/imageView2_2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:layout_marginStart="19dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/frank_profile_pic" />
+        android:src="@drawable/frank_profile_pic"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="75 years old"
+        android:text="12/1 - Aquiantance"
         android:id="@+id/textView2_22"
         android:layout_below="@+id/textView2_2"
         android:layout_alignStart="@+id/textView2_2" />
@@ -48,9 +48,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView_2_2"
-        android:layout_alignTop="@+id/textView1_2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="14dp"
-        android:src="@drawable/ic_action_name" />
+        android:layout_marginEnd="19dp"
+        android:src="@drawable/ic_action_name"
+        android:layout_alignBottom="@+id/textView2_22"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

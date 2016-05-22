@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Kshira Nadarajan"
+        android:text="Taylor Kieburtz"
         android:id="@+id/textView1_2"
         android:layout_alignTop="@+id/imageView1_2"
         android:layout_toEndOf="@+id/imageView1_2"
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Age: 25 - Best Friend"
+        android:text="Startup Weekend"
         android:id="@+id/textView4"
         android:layout_below="@+id/textView1_2"
         android:layout_alignStart="@+id/textView1_2"
@@ -71,5 +71,14 @@
         android:id="@+id/textView6"
         android:layout_below="@+id/imageView1_2"
         android:layout_alignStart="@+id/textView5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/ic_action_star"
+        android:layout_alignTop="@+id/textView1_2"
+        android:layout_toEndOf="@+id/textView1_2"
+        android:layout_above="@+id/textView4" />
 
 </RelativeLayout>
