@@ -15,14 +15,12 @@
         -->
 
     <ImageView
-        android:layout_width="58dp"
-        android:layout_height="58dp"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
         android:id="@+id/imageView1_1"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/kartik_profile_pic" />
+        android:src="@drawable/kartik_pic" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,18 +28,17 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Kartik Rishi"
         android:id="@+id/textView1_1"
-        android:layout_alignTop="@+id/imageView1_1"
-        android:layout_toEndOf="@+id/imageView1_1"
         android:layout_marginStart="32dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageView1_1" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView_1_1"
-        android:layout_marginEnd="21dp"
         android:src="@drawable/ic_action_name"
-        android:layout_alignBottom="@+id/imageView1_1"
+        android:layout_alignTop="@+id/textView"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -50,34 +47,27 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Age 25 - Best Friend"
         android:id="@+id/textView"
+        android:textStyle="italic"
         android:layout_below="@+id/textView1_1"
-        android:layout_alignStart="@+id/textView1_1"
-        android:textStyle="italic" />
+        android:layout_alignLeft="@+id/textView1_1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="&quot;Happy Birthday Kartik!"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="&quot;Happy Birthday Kartik!\n I hope Japan was fun!&quot;"
         android:id="@+id/textView2"
         android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="I hope Japan was fun!&quot;"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/imageView1_1"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_alignStart="@+id/textView"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
         android:src="@drawable/ic_action_full_star"
-        android:layout_above="@+id/imageView_1_1"
-        android:layout_toEndOf="@+id/textView1_1" />
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView1_1"
+        android:layout_alignBottom="@+id/textView1_1" />
 
 </RelativeLayout>
