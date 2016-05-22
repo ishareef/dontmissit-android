@@ -87,13 +87,21 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.list_item, null);
+            if (groupPosition == 0 && childPosition == 0) {
+                convertView = infalInflater.inflate(R.layout.list_item1_1, null);
+            } else if (groupPosition == 0 && childPosition == 1) {
+                convertView = infalInflater.inflate(R.layout.list_item1_2, null);
+            } else if(groupPosition == 1 && childPosition == 0) {
+                convertView = infalInflater.inflate(R.layout.list_item2_1, null);
+            } else {
+                convertView = infalInflater.inflate(R.layout.list_item2_2, null);
+            }
         }
 
-        TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.lblListItem);
+        /*TextView txtListChild = (TextView) convertView
+                .findViewById(R.id.lblListItem);*/
 
-        txtListChild.setText(childText);
+        //txtListChild.setText(childText);
         return convertView;
     }
 

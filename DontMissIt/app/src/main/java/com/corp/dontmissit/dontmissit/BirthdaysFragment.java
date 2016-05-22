@@ -1,8 +1,11 @@
 package com.corp.dontmissit.dontmissit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
@@ -66,6 +69,12 @@ public class BirthdaysFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        this.setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_main, menu);
     }
 
     @Override
@@ -84,6 +93,18 @@ public class BirthdaysFragment extends Fragment {
         // setting list adapter
         expListView.setAdapter(listAdapter);
 
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                if (groupPosition == 0 && childPosition == 0) {
+                    Intent intent = new Intent(getActivity(), ProfileActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
+        });
+        expListView.expandGroup(0);
         return rootView;
     }
 
@@ -134,37 +155,20 @@ public class BirthdaysFragment extends Fragment {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Top 250");
-        listDataHeader.add("Now Showing");
-        listDataHeader.add("Coming Soon..");
+        listDataHeader.add("Today's Birthdays");
+        listDataHeader.add("Upcoming Birthdays");
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
+        List<String> todaysBirthdays = new ArrayList<String>();
+        todaysBirthdays.add("birthday1");
+        todaysBirthdays.add("birthday2");
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
 
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
+        List<String> upcomingBirthdays = new ArrayList<String>();
+        upcomingBirthdays.add("birthday3");
+        upcomingBirthdays.add("birthday4");
 
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-        listDataChild.put(listDataHeader.get(2), comingSoon);
+        listDataChild.put(listDataHeader.get(0), todaysBirthdays); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), upcomingBirthdays);
     }
 }
